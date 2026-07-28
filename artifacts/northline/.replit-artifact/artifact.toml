@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Northline"
+version = "1.0.0"
+id = "artifacts/northline"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24970
+
+[services.development]
+run = "pnpm --filter @workspace/northline run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/northline", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/northline/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24970"
+BASE_PATH = "/"
