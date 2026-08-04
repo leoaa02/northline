@@ -1,0 +1,113 @@
+@layer components {
+  .ds-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+    min-height: 2.5rem;
+    padding: 0 var(--space-16);
+    border-radius: var(--radius-2);
+    border: 1px solid transparent;
+    font-family: var(--app-font-sans), sans-serif;
+    font-size: var(--type-label);
+    font-weight: 600;
+    line-height: 1;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .ds-button:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+
+  .ds-button-primary {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border-color: hsl(var(--primary));
+  }
+
+  .ds-button-primary:hover {
+    background: hsl(var(--primary) / 0.92);
+  }
+
+  .ds-button-secondary {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    border-color: hsl(var(--border));
+  }
+
+  .ds-button-secondary:hover {
+    background: hsl(var(--muted));
+  }
+
+  .ds-input {
+    width: 100%;
+    min-height: 2.5rem;
+    border: 1px solid hsl(var(--input));
+    border-radius: var(--radius-2);
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--app-font-sans), sans-serif;
+    font-size: var(--type-body);
+    padding: 0 var(--space-12);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .ds-input::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .ds-input:focus-visible {
+    outline: none;
+    border-color: hsl(var(--primary));
+    box-shadow: var(--focus-ring);
+  }
+
+  .ds-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-2);
+    padding: 0.2rem var(--space-8);
+    font-family: var(--app-font-mono), monospace;
+    font-size: 0.6875rem;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+
+  .ds-tag {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-2);
+    padding: 0.18rem var(--space-8);
+    font-family: var(--app-font-mono), monospace;
+    font-size: 0.6875rem;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+    background: hsl(var(--background));
+  }
+
+  .ds-divider {
+    width: 100%;
+    height: 1px;
+    background: hsl(var(--border));
+  }
+
+  .ds-card {
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-2);
+    background: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    box-shadow: var(--shadow-card);
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+
+  .ds-card:hover {
+    box-shadow: var(--shadow-soft);
+  }
+}

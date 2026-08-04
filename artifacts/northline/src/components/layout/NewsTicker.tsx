@@ -1,9 +1,24 @@
-import React from 'react';
-import { Link } from 'wouter';
-import { mockPosts } from '@/data/mockData';
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { getArticles, toPost } from '@/services/articles';
+import type { Post } from '@/types/content';
 
 export function NewsTicker() {
-  const tickerItems = mockPosts.slice(0, 5); // Take 5 latest news
+  const [tickerItems, setTickerItems] = useState<Post[]>([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    getArticles().then((articles) => {
+      if (isMounted) {
+        setTickerItems(articles.slice(0, 5).map(toPost));
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <div className="w-full bg-primary text-primary-foreground border-b border-primary/20 flex items-stretch h-8 overflow-hidden">

@@ -47,3 +47,11 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Local env and framework caches
+.env
+.env.*
+artifacts/northline/.env
+artifacts/northline/.env.*
+artifacts/northline/.next/
+artifacts/northline/.sanity/

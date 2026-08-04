@@ -120,7 +120,7 @@ export const mockPosts: Post[] = [
     slug: { current: "arquitectura-hostil-codificada" },
     excerpt: "Los dark patterns no son errores de usabilidad; son el equivalente digital de los bancos con púas anti-vagabundos.",
     featuredImage: { 
-      url: "https://images.unsplash.com/photo-1476842634003-c6cb34da1007?w=1200&q=80", 
+      url: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&q=80", 
       alt: "Arquitectura urbana" 
     },
     category: categories.opinion,

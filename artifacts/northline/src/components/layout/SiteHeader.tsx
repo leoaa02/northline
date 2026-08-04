@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'wouter';
+import Link from 'next/link';
 
 export function SiteHeader() {
   return (
@@ -17,9 +17,7 @@ export function SiteHeader() {
             <Link href="/sobre" className="hover:text-white transition-colors">Sobre mí</Link>
             <Link href="/" className="hover:text-accent transition-colors">Suscribirse</Link>
           </div>
-          <div className="font-mono text-[10px] px-2 py-0.5 rounded-[2px] border border-white/20 text-white/70 tracking-widest uppercase">
-            ES | EN
-          </div>
+          
         </nav>
       </div>
     </header>
