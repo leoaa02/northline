@@ -74,7 +74,7 @@
     "@sanity/image-url": "^2.1.1",
     "@sanity/schema": "^3.99.0",
     "@sanity/types": "^3.99.0",
-    "@sanity/vision": "^4.0.0",
+    "@sanity/vision": "^3.99.0",
     "next": "^15.3.3",
     "next-sanity": "^9.0.0",
     "sanity": "^3.99.0",

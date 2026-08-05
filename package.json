@@ -19,7 +19,6 @@
     "@replit/connectors-sdk": "^0.4.1"
   },
   "devDependencies": {
-    "@esbuild/win32-x64": "0.27.3",
     "esbuild": "0.25.2",
     "prettier": "^3.9.6",
     "typescript": "~5.9.3"
