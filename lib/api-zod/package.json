@@ -7,6 +7,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "workspace": "file:../..",
     "zod": "^3.25.76"
   }
 }
