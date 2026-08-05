@@ -7,11 +7,9 @@
     "postinstall": "npm run install:all",
     "install:all": "npm install --ignore-scripts --prefix lib/api-zod && npm install --ignore-scripts --prefix lib/api-client-react && npm install --ignore-scripts --prefix lib/db && npm install --ignore-scripts --prefix artifacts/northline && npm install --ignore-scripts --prefix artifacts/mockup-sandbox && npm install --ignore-scripts --prefix artifacts/api-server",
     "dev": "node -e \"process.env.PORT='3000'; require('child_process').spawn('npm', ['--prefix', 'artifacts/northline', 'run', 'dev'], { stdio: 'inherit', shell: true });\"",
-    "dev:vercel": "npm --prefix artifacts/northline run dev",
     "dev:mockup": "npm --prefix artifacts/mockup-sandbox run dev",
     "dev:api": "npm --prefix artifacts/api-server run dev",
     "lint": "npm --prefix artifacts/northline run lint",
-    "build:vercel": "npm --prefix artifacts/northline run build",
     "build": "npm --prefix artifacts/northline run build && npm --prefix artifacts/mockup-sandbox run build && npm --prefix artifacts/api-server run build",
     "typecheck:libs": "tsc --build",
     "typecheck": "npm run typecheck:libs && npm --prefix artifacts/northline run typecheck && npm --prefix artifacts/mockup-sandbox run typecheck && npm --prefix artifacts/api-server run typecheck"
@@ -22,7 +20,6 @@
   },
   "devDependencies": {
     "esbuild": "0.25.2",
-    "next": "^15.5.22",
     "prettier": "^3.9.6",
     "typescript": "~5.9.3"
   }
