@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Northline',
   description: 'Northline - una publicación editorial moderna',
   icons: {
-    icon: '/northline-logo.ico',
+    icon: '/northline-logo.ico?v=2',
   },
 };
 
