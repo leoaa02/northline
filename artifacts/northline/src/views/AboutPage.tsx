@@ -63,7 +63,7 @@ export function AboutPage() {
 
             <figure className="relative mx-auto h-72 w-72 max-w-full overflow-hidden rounded-full border border-border/70 bg-muted/40 p-1 shadow-sm lg:mx-0 lg:h-80 lg:w-80">
               <Image
-                src="/foto-sobremi-northline.JPEG"
+                src="/foto-leo.jpeg"
                 alt="Retrato de Leonardo Alcala"
                 width={640}
                 height={640}

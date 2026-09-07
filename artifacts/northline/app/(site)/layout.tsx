@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--app-font-sans' });
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--app-font-serif' });
 const jetBrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--app-font-mono' });
 
+
 export const metadata: Metadata = {
   title: {
     default: 'Northline',

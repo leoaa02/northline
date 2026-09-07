@@ -3,12 +3,22 @@ import { SiteHeader } from './SiteHeader';
 import { SiteFooter } from './SiteFooter';
 import { NewsTicker } from './NewsTicker';
 
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="es">
+      {/* Añadimos suppressHydrationWarning aquí */}
+      <body suppressHydrationWarning>{children}</body>
+    </html>
+  );
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col w-full bg-background text-foreground selection:bg-accent selection:text-white">
       <SiteHeader />
       <NewsTicker />
       <main className="flex-1 flex flex-col">
+        
         {children}
       </main>
       <SiteFooter />
